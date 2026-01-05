@@ -1,0 +1,491 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HEADER ================= */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+
+  background-color: #8b3e1f;
+  color: white;
+  text-decoration: none;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #6f2f16;
+  transform: translateX(-3px);
+}
+
+
+/* ============= NOM"TEKS========== */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 35vh, 260px);
+  overflow: hidden;
+}
+
+.super {
+  width: 100%;
+  height: 100%;
+  background-image: url("DASHBOARD.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); 
+  z-index: 1;
+}
+
+.mie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  
+  
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
+}
+
+
+.title-web {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: bold;
+  color: #8b3e1f; 
+  letter-spacing: 2px;
+  /* text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); */
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight:100;
+  color: #9c7c6b;
+  margin-top: 5px; 
+}
+/* ============= NOM"TEKS END======== */
+
+/* =============NAVBAR============== */
+.navbar{
+    display:flex;
+    align-items: center;
+    gap :4px;  
+    background-color:#5b1f0f ;
+    padding :10px 16px;
+    justify-content: space-between; /* untuk memberikan jarak antara navbar */
+    flex-shrink: 0;
+    position :sticky;
+    top:0px;
+    left :0px;
+    width :100%;
+    z-index:1000 !important;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    flex: 1; 
+}
+
+/* navvbar text */
+.text{
+    color :white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.95rem;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 0.75rem;
+  }
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #f5e7db;
+  width: 40px;
+  border-width: 2px;
+  padding-bottom: 1px;
+}
+/*================= NAVBAR END======================== */
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 1024px) { 
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr); 
+}
+}
+
+@media (max-width: 768px) { 
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) { 
+  .card-wrapper {
+    
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+  }
+  .card {
+    min-width: 220px; 
+    scroll-snap-align: start;
+  }
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+
+/* ================= ACCOUNT ================= */
+/* ============= CONTAINER UTAMA ============== */
+.account-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #9f3214;
+  letter-spacing: -1px;
+  padding: 20px 10px 10px 65px; 
+  text-align: center;  /* penting */
+  letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+/* PROFIL SECTION */
+.profile-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    background: #d9d9d9;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-placeholder img {
+    width: 80%;
+    opacity: 0.5;
+}
+
+.edit-btn {
+    background: #8b3e1f;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* BOX INPUT PROFIL */
+.profile-box {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.profile-box label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+
+.input-real {
+    width: 100%;
+    height: 40px;
+    background: #e0e0e0; /* Warna abu-abu saat terkunci */
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin: 8px 0 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+/* Style saat kotak diaktifkan (siap diketik) */
+.input-real:not(:disabled) {
+    background: #ffffff;
+    border: 1px solid #8b3e1f;
+    color: #333;
+    box-shadow: 0 0 5px rgba(139, 62, 31, 0.2);
+}
+
+/* ================= ACCORDION FIX ================= */
+
+/* WADAH ACCORDION */
+.menu-box {
+  border: 5px solid #ccc;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 80px; /* JARAK KE FOOTER */
+}
+
+/* JUDUL MENU */
+.menu-item {
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+}
+
+/* HOVER EFFECT */
+.menu-item:hover {
+  background: #faf3ef;
+}
+
+/* ISI ACCORDION */
+.content {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* CARD DI DALAM ACCORDION */
+.content .card {
+  background: #ffffff;
+}
+
+/* LOGOUT AREA */
+.content.logout {
+  text-align: center;
+}
+
+.content.logout p {
+  margin-bottom: 14px;
+}
+
+/* FOOTER JANGAN NAIK */
+footer {
+  margin-top: 60px;
+}
+
+
+/* ACCORDION */
+.accordion input {
+  display: none;
+}
+
+.menu-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item::after {
+  content:none;
+  position: absolute;
+  right: 20px;
+  transition: 0.3s;
+}
+
+input:checked + .menu-item::after {
+  transform: rotate(180deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: 0.4s ease;
+}
+
+input:checked + .menu-item + .content {
+  max-height: 1000px;
+  padding: 16px 20px;
+}
+
+/* HILANGIN GARIS DI DALAM ACCORDION */
+.menu-box {
+  border: 1px solid #ccc; /* border luar tetap */
+}
+
+.menu-item {
+  border-bottom: none; /* ❌ hapus garis abu antar menu */
+}
+
+.content {
+  border-top: none; /* ❌ hapus garis abu di dalam isi */
+}
+
+.menu-item {
+  border-bottom: none;
+  margin-bottom: 4px;
+}
+
+.menu-box {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+
+/* KARTU TEMPAT (INSIDE ACCORDION) */
+.card {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.card img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* CARD */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 16px;
+  background: #fafafa;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.card img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* LOGOUT */
+.yes {
+  background: #8b3e1f;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+
+/* ================ KONTEN END==========================*/
+
+/* =================FOTTER============================ */
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #5b1f0f;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  margin:0px;
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    justify-content :center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.footer-item {
+  flex:1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:300px;
+}
+
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+}
+
+
+.footer-text {
+  font-size: 14px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* =================FOTTER END============================ */

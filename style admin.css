@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== HEADER TOP ===== */
+
+/* Right icons */
+.header-icon {
+    display: flex;
+    gap: 25px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #a43a1c;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Container untuk auth */
+.dropdown-auth {
+    position: relative;
+}
+
+/* Menu Dropdown Auth */
+.auth-menu {
+    position: absolute;
+    top: 35px; /* Jarak dari tombol atas */
+    right: 0;   /* Rata kanan */
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    width: 150px;
+    list-style: none;
+    padding: 8px 0;
+    display: none; /* Sembunyi dulu */
+    z-index: 1000;
+}
+
+/* Munculkan menu */
+.auth-menu.show {
+    display: block;
+}
+
+.auth-menu li a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.auth-menu li a:hover {
+    background-color: #fff7e8;
+    color: #a43a1c;
+}
+
+.auth-menu hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 5px 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;        /* 🔥 KUNCI UTAMA */
+    top: 0;                 /* NEMPEL PALING ATAS */
+    left: 0;
+    width: 100%;
+    z-index: 9999;          /* BIAR GA KETUTUP KONTEN */
+
+    background-color: #fff7e8;
+    padding: 12px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* opsional tapi cakep */
+}
+
+/* LIST MENU */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;              /* 🔥 WAJIB */
+    padding: 0;
+}
+
+/* ITEM */
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #a43a1c;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+/* BOX DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px); /* 🔥 NEMPEL HALUS */
+  left: 0;
+
+  background: #fff;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  list-style: none;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap:0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: 0.2s ease;
+}
+
+
+/* SHOW */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ITEM */
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #a43a1c;
+  width: 100%;
+  box-sizing:border-box;
+  text-align: left;
+  white-space: nowrap; /* 🔥 Biar ga patah ke bawah */
+
+}
+
+.dropdown-menu li a:hover {
+  background-color: #fff1dc;
+}
+
+body {
+  padding-top: 90px;   /* cukup buat navbar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+
+.dashboard {
+    padding: 20px 40px;
+}
+
+/* =================KONTEN============================ */
+/* CONTAINER UTAMA */
+.dashboard-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 40px clamp(16px, 5vw, 80px);
+}
+
+
+.section-title {
+    color: #a43a1c;
+    margin-bottom: 40px; /* Ditambah dari 20px ke 40px */
+    margin-top: 60px;    /* Memberi jarak dengan konten di atasnya */
+    font-style: italic;
+    font-weight: 800;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+/* Khusus untuk judul pertama agar tidak terlalu jauh dari navbar */
+.dashboard-container .section-title:first-child {
+    margin-top: 20px;
+}
+
+.center-text { text-align: center; width: 100%; }
+.spaced { margin-top: 50px; letter-spacing: 10px; text-transform: uppercase; }
+
+/* ===== ALL DATA ===== */
+.stats {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #a43a1c;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.stat-card {
+  background-color: #fff;
+  border: 3px solid #5b1f0f;
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-align: center;
+
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.stat-card i {
+  font-size: 34px;
+  color: #a43a1c;   /* warna icon */
+  margin-bottom: 10px;
+}
+
+/* LABEL */
+.stat-card span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a3b2a;   /* warna teks label */
+  margin-bottom: 8px;
+}
+
+/* ICON */
+.stat-card .icon {
+  font-size: 36px;
+  color: #a43a1c;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* LABEL */
+.stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a3b2a;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* NUMBER */
+.stat-card h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #a43a1c;
+}
+
+/* TABLES */
+.tables-flex {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.table-box { flex: 1; }
+
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 15px; /* Angka 15px ini yang bikin antar baris ada jarak */
+}
+
+td {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    /* Memberikan efek bayangan lembut agar terlihat terpisah */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+th { padding: 15px; text-align: left; color: white; }
+td { padding: 15px; background: white; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+.bg-red { background-color: #a43a1c; }
+.bg-orange { background-color: #f3b06b; }
+
+.see-all {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+
+/* --- Styling Review --- */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px; /* Jarak vertikal 40px, jarak horizontal 60px */
+    margin-bottom: 30px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+
+.user-name {
+    display: inline-block;
+    background: #f1f1f1;
+    padding: 2px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bubble {
+    background: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    position: relative;
+    min-width: 250px;
+}
+
+/* --- Styling Grafik --- */
+.charts-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chart-header h3 { color: #a43a1c; font-size: 18px; }
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #5b1f0f 0% 28%, 
+        #f3b06b 28% 53%, 
+        #a43a1c 53% 76%, 
+        #ffdbac 76% 100%
+    );
+    margin: 0 auto;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-top: 20px;
+}
+
+.bar {
+    width: 40px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bar span {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.color-1 { background-color: #ffdbac; }
+.color-2 { background-color: #a43a1c; }
+.color-3 { background-color: #f3b06b; }
+.color-4 { background-color: #5b1f0f; }
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; }
+.kfc { background: #5b1f0f; }
+.kopi { background: #f3b06b; }
+.jco { background: #a43a1c; }
+.solaria { background: #ffdbac; }
+
+.see-all {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a43a1c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.top-restaurant {
+  background: #fff7e8;
+  border-left: 6px solid #a43a1c;
+  padding: 16px 20px;
+  margin: 20px auto 30px;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.top-restaurant h3 {
+  color: #a43a1c;
+  margin-bottom: 8px;
+}
+
+.top-restaurant p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.top-restaurant span {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== BULAN FILTER ===== */
+.month-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 0 30px;
+}
+
+.month-filter label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a43a1c;
+  letter-spacing: 1px;
+}
+
+/* SELECT STYLE */
+.month-filter select {
+  appearance: none;        /* hapus style default */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 10px 40px 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 2px solid #f3b06b;
+  background-color: #fff7e8;
+  color: #5b1f0f;
+  cursor: pointer;
+  min-width: 180px;
+
+  /* icon dropdown */
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23a43a1c' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+
+  transition: 0.2s ease;
+}
+
+.month-filter select:hover {
+  border-color: #a43a1c;
+}
+
+.month-filter select:focus {
+  outline: none;
+  border-color: #5b1f0f;
+  box-shadow: 0 0 0 3px rgba(164,58,28,0.2);
+}
+
+/* ===== CHART HEADER (DROPDOWN + TOP RATING) ===== */
+.chart-top {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;              /* jarak antar dropdown & top rating */
+  margin: 30px auto 40px;
+}
+
+
+/* dropdown versi horizontal */
+.month-filter.horizontal {
+  flex-direction: row;
+  gap: 12px;
+  margin: 0;
+}
+
+/* biar top rating ga kegedean */
+.top-restaurant {
+  margin: 0;
+  max-width: 360px;
+  text-align: center;
+}
+
+.month-filter.horizontal {
+  flex: 0 0 auto;   /* ukuran sesuai konten */
+}
+
+.top-restaurant {
+  flex: 1;          /* 🔥 ngambil sisa ruang */
+  max-width: 560px; /* atur seberapa lebar */
+  margin: 0;
+}
+
+
+
+/* =================FOTTER============================ */
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #5b1f0f;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  margin:0px;
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    justify-content :center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.footer-item {
+  flex:1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:300px;
+}
+
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+}
+
+
+.footer-text {
+  font-size: 14px;
+  color: white;
+}
+/* =================FOTTER END============================ */

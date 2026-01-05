@@ -1,0 +1,449 @@
+*{
+    margin: 0px;; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+    margin:0;
+    min-height: 100vh;
+    
+}
+.map-container {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 35vh, 260px);
+  overflow: hidden;
+}
+.super {
+  width: 100%;
+  height: 100%;
+  background-image: url("DASHBOARD.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; 
+  position: absolute;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); 
+  z-index: 1;
+}
+
+.mie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  
+  
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
+}
+
+
+.title-web {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: bold;
+  color: #8b3e1f; 
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight:100;
+  color: #9c7c6b;
+  margin-top: 5px; 
+}
+/* ============= NOM"TEKS END======== */
+
+.navbar{
+    display:flex;
+    align-items: center;
+    gap :4px;  
+    background-color:#5b1f0f ;
+    padding :15px 16px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* untuk memberikan jarak antara navbar */
+    flex :1px;
+    position :sticky;
+    top:0px;
+    left :0px;
+    width :100%;
+    z-index:1000!important;
+    
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    flex: 1; 
+}
+.nav-links.active {
+  border-bottom: 2px solid #f5e7db;
+  padding-bottom: 4px;
+} 
+
+
+/* navvbar text */
+.text{
+    color :white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    align-items: center;
+
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #f5e7db;
+  width: 40px;
+  border-width: 2px;
+  padding-bottom: 1px;
+}
+
+.super {
+  height: 260px;
+  background-image: url("gambar\ kategori.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+/* ======================KONTEN/CARD=============================*/
+.main-heading {
+    margin: 0; 
+    line-height: 1.1; 
+}
+
+.judul-kategori-utama {
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #9f3214;
+    letter-spacing: -0,5px;
+    padding: 15px 10px 10px 40px; 
+    text-align: left;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap; /* DIUBAH: supaya tidak turun ke bawah */
+    overflow-x: auto;  /* DITAMBAH: supaya bisa di-scroll samping */
+    -ms-overflow-style: none; 
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px 10px 20px 40px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+.main-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 260px; /* DIUBAH: agar lebar card konsisten saat dijejerkan */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+   
+    width: 100%;       /* Mengikuti lebar container-nya */
+    max-width: 350px;  /* Batas lebar maksimal card */
+    min-height: 380px; /* Gunakan min-height agar card tidak "gepeng" saat isinya sedikit */
+    display: flex;
+    flex-direction: column; /* Menyusun isi card dari atas ke bawah */    
+    
+}       
+
+/* --- BAGIAN BARU UNTUK ICON IMAGE --- */
+.icon-wrapper {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* --- AKHIR BAGIAN BARU --- */
+
+.card-image {
+  width: 100%;       /* Mengikuti lebar card */
+  height: 150px;     /* Tentukan tinggi yang kamu inginkan */
+  object-fit: cover; /* Ini kuncinya! Gambar akan dipotong agar proporsional */
+  display: block;
+}
+
+.card-content {
+    padding: 15px;
+    color: #5b1f0f;
+}
+
+.card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 10px 10px rgba(215, 215, 215, 0); 
+  z-index: 10;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    margin :0;
+}
+
+
+
+/* =================UNTUK RINGKASAN================== */
+.section-card {
+    display: flex;
+    justify-content: space-between; /* Ringkasan ke kiri, Menu ke kanan */
+    align-items: center;
+    padding: 0px 5px; /* Jarak aman agar tidak nempel ke pinggir card */
+    margin-top: 5px;
+}
+.divider { 
+    align-items: flex-start;
+    border-bottom: 2px solid #5b1f0f;
+    width: fit-content;
+    padding-bottom: 2px;
+    margin: 0;
+    width: fit-content;
+}
+.section-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom: 2px solid #5b1f0f;
+    width: fit-content;
+    padding-bottom:2px;
+    margin: 0; /* Margin diatur oleh parent */
+}
+
+.section-menu span,.divider span {
+    line-height: 1;
+    font-size: 12px; /* Tulisan Ringkasan/Menu diperkecil */
+    font-weight: bold;
+}
+.info-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 11.5px;
+    align-items: center;
+    margin-top:6px;
+}
+
+/* KONTEN MENU */
+
+.menu-list-content {
+    padding: 10px;
+}
+
+.upload-box {
+    border: 2px dashed #5b1f0f;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #5b1f0f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom foto */
+    gap: 8px;
+}
+
+.menu-grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover; /* Foto tetap rapi & fit di grid */
+    border-radius: 8px;
+}
+.menu-img {
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.default-menu {
+  border: 2px solid #f1c5a6;
+}
+
+
+/* ================= MEDIA QUERIES (HP, IPAD, LAPTOP) ================== */
+
+/* 1. LAPTOP (Layar besar) */
+@media (min-width: 1025px) {
+    .judul-kategori-utama { font-size: 32px; }
+}
+
+/* 2. IPAD / TABLET */
+@media (max-width: 1024px) {
+    .judul-kategori-utama { 
+        font-size: 28px; 
+        padding-left: 30px;
+    }
+    .main-container { padding-left: 30px; }
+    .card { flex: 0 0 240px; } 
+
+    /* Tambahan Footer untuk iPad */
+    .footer {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* 3. HP (Mobile) */
+@media (max-width: 600px) {
+    .judul-kategori-utama { 
+        font-size: 24px; 
+        padding-left: 20px;
+    }
+    .main-container { 
+        padding-left: 20px; 
+        gap: 12px;
+    }
+    .card { 
+        flex: 0 0 210px; 
+        min-height: 340px;
+    }
+    .card-title { font-size: 16px; }
+    .card-image { height: 130px; }
+
+    /* EDIT BAGIAN FOOTER INI */
+    .footer {
+        flex-direction: row; /* TETAP KE SAMPING */
+        justify-content: center; /* Kumpul di tengah */
+        gap: 10px; /* Jarak antar item dipersempit supaya muat */
+        padding: 20px 10px;
+    }
+    .footer-item {
+        min-width: unset; /* WAJIB: supaya item bisa mengecil sesuai layar HP */
+        flex: 1; /* Supaya bagi-bagi ruang secara adil */
+    }
+    .footer-text {
+        font-size: 10px; /* Perkecil font supaya tidak makan tempat */
+    }
+    .footer-icon {
+        width: 24px; /* Perkecil icon */
+        height: 24px;
+    }
+     
+}
+
+
+/* UNTUK JS */
+/* Sembunyikan semua konten menu saat pertama kali buka halaman */
+.menu-list-content {
+    display: none;
+}
+
+/* Biar kursor berubah jadi jari pas hover tulisan Menu/Ringkasan */
+.section-menu, .divider {
+    cursor: pointer;
+}
+
+/* Style untuk menandai tab mana yang aktif */
+.active-tab {
+    border-bottom: 3px solid #5b1f0f !important;
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #5b1f0f;
+  padding: 40px 20px;
+  flex-wrap:nowrap;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.footer-item {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:none;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: white;
+}
+

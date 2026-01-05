@@ -1,0 +1,413 @@
+/* ================= RESET & GLOBAL (Diperbaiki) ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Digabung di sini */
+   
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Dikunci pada kedua level */
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+    min-height: 100vh;
+}
+
+/* ============= NOM"TEKS========== */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 35vh, 260px);
+  overflow: hidden;
+}
+
+.super {
+  margin: 0; 
+  width: 100%;
+  height: 100%;
+  background-image: url("DASHBOARD.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  gap: 14px; 
+  text-align: center;
+  pointer-events: none;
+}
+/* =============SEARCH BOX================ */
+.search-section {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  pointer-events: auto; /* supaya input bisa diklik */
+  margin-bottom: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 999px;
+  padding: 10px 14px;
+  width: min(90%, 480px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+.search-box button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* =============SEARCH BOX================ */
+
+.title-web {
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: bold;
+  color: #8b3e1f; 
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight:100;
+  color: #9c7c6b;
+  margin-top: 5px; 
+}
+
+/* =============NAVBAR============== */
+.navbar{
+    display:flex;
+    align-items: center;
+    gap :4px;  
+    background-color:#5b1f0f ;
+    padding :15px 16px;
+    justify-content: space-between; 
+    flex-shrink: 0;
+    position :sticky;
+    top:0px;
+    left :0px;
+    width:100%;
+    z-index:1000 !important;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    flex: 1; 
+}
+
+.text{
+    color :white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.95rem;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 0.75rem;
+  }
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #f5e7db;
+  width: 40px;
+  border-width: 2px;
+  padding-bottom: 1px;
+}
+
+/* ================MAIN KONTEN======================== */
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  width: 100%;
+  overflow-x: hidden; /* Mengamankan konten utama */
+}
+
+.recently h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* CARD WRAPPER */
+.card-wrapper {
+  display: flex;
+  gap: 24px;
+  width:100%;
+  overflow-x: auto;
+  padding-bottom: 50px;
+  scrollbar-width: none;  
+}   
+
+.card-wrapper,
+.card {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* CARD */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 320px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.category {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.distance {
+  font-size: 14px;
+  color: #e53935;
+  font-weight: 500;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.menu-image {
+  width: 100%;
+  max-width: 320px;     /* batas lebar gambar */
+  height: 200px;        /* tinggi konsisten */
+  object-fit: cover;    /* potong rapi tanpa melar */
+  border-radius: 12px;
+  display: block;
+  margin: 16px auto 0;  /* center */
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 1024px) { 
+  .card-wrapper {
+    /* Menjaga konsistensi display flex agar overflow-x: auto bekerja */
+    display: flex; 
+  }
+}
+
+@media (max-width: 480px) { 
+  .card-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .card {
+    min-width: 220px; 
+    scroll-snap-align: start;
+  }
+}
+/* TAMBAHAN STYLE DI CARD */
+/* ========== DETAIL MODAL ========== */
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.detail-overlay.active {
+  display: flex;
+}
+
+.detail-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+}
+
+.detail-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e53935;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.detail-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detail-category {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* TAB */
+.detail-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #8b3e1f;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.menu-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* =================FOTTER============================ */
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #5b1f0f;
+  padding: 40px 20px;
+  flex-wrap:nowrap;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+
+.footer-item {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:none;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: white;
+}

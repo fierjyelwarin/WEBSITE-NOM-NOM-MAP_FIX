@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom-Nom Map</title>
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body>
+<!-- ================= DETAIL MODAL ================= -->
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-modal">
+
+    <button class="detail-close" id="closeDetail">✕</button>
+
+    <img src="" class="detail-image" id="detailImage">
+
+    <h2 id="detailTitle"></h2>
+    <p class="detail-category" id="detailCategory"></p>
+
+    <!-- TAB -->
+    <div class="detail-tabs">
+      <button class="tab-btn active" data-tab="summary">Ringkasan</button>
+      <button class="tab-btn" data-tab="menu">Menu</button>
+      <button class="tab-btn" data-tab="rating">Rating</button>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content active" id="summary">
+      <p id="detailSummary"></p>
+    </div>
+
+    <div class="tab-content" id="menu">
+      <img src="" class="menu-image" id="menuImage" alt="Menu">
+    </div>
+
+    <div class="tab-content" id="rating">
+      <p>4.8 (1.2K reviews)⭐</p>
+      <p>Tempat nyaman dan makanan enak.</p>
+    </div>
+
+  </div>
+</div>
+<div class="map-container">
+  <header class="super"></header>
+  
+  <div class="map-overlay"></div>
+
+  <section class="mie">
+    <h1 class="title-web">Nom-Nom Map</h1>
+    <!-- ===== SEARCH BOX ===== -->
+  <section class="search-section">
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput"
+        placeholder="Cari Restoranmu..."
+      >
+      <button id="searchBtn">🔍</button>
+    </div>
+  </section>
+  <!-- ===== END SEARCH BOX ===== -->
+
+  </section>
+  
+</div>
+
+
+<!-- ===========================NAVBAR============================= -->
+  <nav class="navbar">
+  <a href="rekomendasi.html" class="nav-link active"> <span class="text">Dashboard</span></a> 
+  <a href="kategori.html"class="nav-link"><span class="text">Category</span></a>
+  <a href="rating.html"class="nav-link"><span class="text">Rating</span></a>
+  <a href="about.html"class="nav-link"><span class="text">About Us</span></a>
+  <a href="account.html"class="nav-link"><span class="text">Account</span></a>
+   </nav>
+<!-- ======= MAIN======== -->
+<main class="main-content">
+
+  
+  <!-- RECENTLY -->
+  <section class="recently">
+    <h2>Recently</h2>
+
+    <div class="card-wrapper">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="Richeese.jpeg" alt="DASHBOARD,ricis" class="card-image">
+        <div class="card-body">
+          <h3>Richeese Factory</h3>
+          <p class="category">Food, Drink, Dessert</p>
+          <p class="distance">📍 1.6 km</p>
+        </div>
+      </div>
+
+      <!-- Card 2 (active) -->
+      <div class="card">
+        <img src="HAYAM.jpg" alt="Hayam Resto">
+        <div class="card-body">
+          <h3>Hayam Resto</h3>
+          <p class="category">Food</p>
+          <p class="distance">📍 0.8 km</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="MOROREJO.jpg" alt="Mororejo">
+        <div class="card-body">
+          <h3>Mororejo</h3>
+          <p class="category">Food</p>
+          <p class="distance">📍 0.8 km</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+      <img src="AYAM MANGGA.jpg" alt="DASHBOARD,"class="card-image">
+        <div class="card-body">
+          <h3>Ayam Sambal Mangga</h3>
+          <p class="category">Food</p>
+          <p class="distance">📍 0.8 km</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="MOMOYO.jpeg" alt="Momoyo">
+        <div class="card-body">
+          <h3>Momoyo</h3>
+          <p class="category">Drink, Dessert</p>
+          <p class="distance">📍 0.95 km</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+<!-- Popular -->
+<section class="popular">
+    <h2>Popular</h2>
+
+    <div class="card-wrapper">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="BAKSO SOLO.jpg" alt="BAKSO SOLO">
+        <div class="card-body">
+          <h3>Bakso Solo Samrat</h3>
+          <p class="category">Food</p>
+          <p class="distance">📍 5.9 km</p>
+        </div>
+      </div>
+
+      <!-- Card 2 (active) -->
+      <div class="card">
+        <img src="MOMOYO.jpeg" alt="Momoyo">
+        <div class="card-body">
+          <h3>Momoyo</h3>
+          <p class="category">Drink, Dessert</p>
+          <p class="distance">📍 0.95 km</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="SATE.jpeg" alt="Sate Taichan">
+        <div class="card-body">
+          <h3>Sate Taichan</h3>
+          <p class="category">Food</p>
+          <p class="distance">📍 0.5 km</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="ES KRIM RB.jpeg" alt="Baskin Robins">
+        <div class="card-body">
+          <h3>Baskin Robins</h3>
+          <p class="category">Drink, Dessert</p>
+          <p class="distance">📍 1.65 km</p>
+        </div>
+      </div>
+</main>
+
+
+<footer class="footer">
+
+  <div class="footer-item">
+    <a href="https://instagram.com/nomnommap" target="_blank" class="footer-link">
+      <img src="INSTA.png" alt="Instagram" class="footer-icon">
+      <span class="footer-text">@nomnommap</span>
+    </a>
+  </div>
+
+  <div class="footer-item">
+    <a href="mailto:nomnommap@gmail.com" class="footer-link">
+      <img src="EMAIL.png" alt="Email" class="footer-icon">
+      <span class="footer-text">nomnommap@gmail.com</span>
+    </a>
+  </div>
+
+  <div class="footer-item">
+    <a href="tel:+628123456789" class="footer-link">
+      <img src="TELEPON.png" alt="Phone" class="footer-icon">
+      <span class="footer-text">+62 812-3456-789</span>
+    </a>
+  </div>
+
+</footer>
+
+<script src="style.js"></script>
+</body>
+</html>

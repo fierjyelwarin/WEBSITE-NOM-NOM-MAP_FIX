@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom-Nom Map</title>
+    <link rel="stylesheet" href="account.css"> 
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">← Kembali</a>
+
+  <header class="super"></header>
+
+<main class="account-container">
+        <h1 class="title">MY ACCOUNT</h1>
+
+        <section class="profile-top">
+            <div class="avatar-placeholder">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="#aaa"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <button class="edit-btn">Edit Profile</button>
+        </section>
+
+        <section class="profile-box">
+    
+    <label>Username</label>
+    <input type="text" class="input-real" value="User_NomNom" disabled>
+    
+    <label>Email</label>
+    <input type="email" class="input-real" value="user@gmail.com" disabled>
+    
+    <label>Phone Number</label>
+    <input type="tel" class="input-real" value="08123456789" disabled>
+    
+    <label>Age (optional)</label>
+    <input type="number" class="input-real" value="20" disabled>
+</section>
+
+        <section class="menu-box accordion">
+
+            <input type="radio" name="acc" id="m2">
+            <label for="m2" class="menu-item">
+                <span style="font-size:24px; margin-right:15px;">🔖</span> Saved Places
+            </label>
+            <div class="content">
+                <div class="card">
+                    <div>
+                        <h4 style="margin:0">Bakso Solo Samrat</h4>
+                        <p style="margin:5px 0; font-size:12px; color:gray;">Cafe • 5.9 km</p>
+                    </div>
+                    <img src="Bakso Solo.jpg">
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h4 style="margin:0">Es Teler</h4>
+                        <p style="margin:5px 0; font-size:12px; color:gray;">Cafe • 1.2 km</p>
+                    </div>
+                    <img src="ES TELER.jpg">
+                </div>
+            </div>
+
+            <input type="radio" name="acc" id="m3">
+            <label for="m3" class="menu-item">
+                <span style="font-size:24px; margin-right:15px;">👀</span> My Reviews
+            </label>
+            <div class="content">
+                <div class="card">
+                    <div>
+                        <h4 style="margin:0">Baskin Robins</h4>
+                        <p style="margin:5px 0; font-size:12px; color:gray;">⭐⭐⭐⭐☆ • 1.65 km</p>
+                    </div>
+                    <img src="ES KRIM RB.jpeg">
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h4 style="margin:0">Holland Bakery</h4>
+                        <p style="margin:5px 0; font-size:12px; color:gray;">⭐⭐⭐⭐☆ • 800 m</p>
+                    </div>
+                    <img src="HOLLAND BAKERY.jpg">
+                </div>
+            </div>
+
+            <input type="radio" name="acc" id="m4">
+            <label for="m4" class="menu-item">
+                <span style="font-size:24px; margin-right:15px;">➡️</span> Log Out
+            </label>
+            <div class="content">
+                <p>are you sure you want to leave?</p>
+               <button id="logoutYes"
+                style="background:#8b3e1f; color:white; border:none; padding:10px 15px; border-radius:5px;">yes</button>
+
+            </div>
+
+        </section>
+
+        <p style="text-align:center; color:gray; font-size:17px; margin-top:30px;">2025-2026 | Nom-Nom Map</p>
+    </main>
+
+
+<footer class="footer">
+
+  <div class="footer-item">
+    
+    <img src="INSTA.png" alt="Instagram" class="footer-icon">
+    <a href="https://instagram.com/nomnommap" target="_blank" class="footer-link">
+    <span class="footer-text">@nomnommap</span> 
+    </a>
+  </div>
+
+  <div class="footer-item">
+   <a href="mailto:nomnommap@gmail.com" class="footer-link">
+      <img src="EMAIL.png" alt="Email" class="footer-icon">
+      <span class="footer-text">nomnommap@gmail.com</span>
+    </a>
+  </div>
+
+  <div class="footer-item"class="footer-icon">
+    <a href="tel:+628123456789" class="footer-link">
+      <img src="TELEPON.png" alt="Phone" class="footer-icon">
+      <span class="footer-text">+62 812-3456-789</span>
+    </a>
+  </div>
+
+</footer>
+
+<script>
+    const editBtn = document.querySelector('.edit-btn');
+    const inputs = document.querySelectorAll('.input-real');
+
+    editBtn.addEventListener('click', () => {
+        // Cek apakah sekarang sedang dalam mode edit atau tidak
+        const isEditing = editBtn.innerText === "Save Profile";
+
+        if (isEditing) {
+            // Jika sedang mode Save, maka kunci kembali semua input
+            inputs.forEach(input => {
+                input.disabled = true;
+            });
+            editBtn.innerText = "Edit Profile";
+            alert("Profil berhasil disimpan!"); // Notifikasi simpel
+        } else {
+            // Jika sedang mode Edit, maka buka kunci semua input
+            inputs.forEach(input => {
+                input.disabled = false;
+            });
+            inputs[0].focus(); // Fokuskan ke input pertama
+            editBtn.innerText = "Save Profile";
+        }
+    });
+     // logout
+        const logoutBtn = document.getElementById('logoutYes');
+        logoutBtn.addEventListener('click', () => {
+            window.location.href = "WelcomePage.html"; // welcome page
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Owner Dashboard | Nom Nom Map</title>
+  <link rel="stylesheet" href="indexowner.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Nom-Nom Map</h2>
+
+    <nav>
+      <a href="indexowner.html" class="active">📊 Dashboard </a> 
+      <a href="uploadowner.html">🖼 Upload </a>
+      <a href="reviewowner.html">💬 Rating & Review</a>
+      <a href="profileowner.html">👤 Profile</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <!-- HEADER -->
+    <div class="dashboard-header">
+      <h1>Dashboard</h1>
+
+      <div class="header-action">
+        <select id="monthFilter">
+          <option>January 2026</option>
+          <option>February 2026</option>
+          <option>March 2026</option>
+          <option>April 2026</option>
+          <option>May 2026</option>
+          <option>June 2026</option>
+          <option>July 2026</option>
+          <option>Agustus 2026</option>
+          <option>September 2026</option>
+          <option>October 2026</option>
+          <option>November 2026</option>
+          <option>December 2026</option>
+        </select>
+
+        <button class="download-btn">
+         📄Download Report
+        </button>
+      </div>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <section class="summary">
+
+      <div class="summary-card">
+        <div class="icon-circle yellow">
+         ⭐
+        </div>
+        <div class="summary-text">
+        <p>Average Rating</p>
+        <h2>4.4 </h2>
+      </div>
+    </div>
+
+      <div class="summary-card">
+        <div class="icon-circle red">
+         💬
+        </div>
+        <div class="summary-text">
+        <p>Total Review</p>
+        <h2>1.381</h2>
+      </div>
+    </div>
+
+      <div class="summary-card">
+        <div class="icon-circle green">
+         ✔
+        </div>
+        <div class="summary-text">
+        <p>Response Rate</p>
+        <h2>52%</h2>
+      </div>
+    </div>
+    </section>
+
+    <!-- GRAPH -->
+    <section class="report-row">
+
+  <!-- CHART -->
+  <div class="chart-card">
+    <h3>Monthly Report</h3>
+    <canvas id="monthlyChart"></canvas>
+  </div>
+
+  <!-- REVIEW -->
+  <div class="review-card">
+    <h3>Review Summary</h3>
+
+ <div class="review-list"></div>
+    <div class="review-item">
+      <p class="user">bananaenthusiast ⭐⭐⭐⭐</p>
+      <p class="text">bolu pisangnya moist banget, legit dan gak bikin enek.</p>
+    </div>
+
+    <div class="review-item">
+      <p class="user">anakngemil ⭐⭐⭐</p>
+      <p class="text">wajib sabar sih, ngantrinya lumayan, tapi rasanya emang worth it.</p>
+    </div>
+
+    <div class="review-item">
+      <p class="user">Dewi Anggraini ⭐⭐⭐⭐</p>
+      <p class="text">bolu pisangnya lembut dan cocok untuk oleh-oleh keluarga.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="indexowner.js"></script>
+
+</body>
+</html>

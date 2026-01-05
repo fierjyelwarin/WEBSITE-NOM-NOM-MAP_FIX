@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Photo | Nom-Nom Map</title>
+  <link rel="stylesheet" href="uploadowner.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <h2 class="logo">Nom-Nom Map</h2>
+    <nav>
+      <a href="indexowner.html">📊 Dashboard</a>
+      <a href="uploadowner.html" class="active">🖼 Upload</a>
+      <a href="reviewowner.html">💬 Rating & Review</a>
+      <a href="profileowner.html">👤 Profile</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <h1>Photo Upload</h1>
+
+    <section class="section">
+      <h3>Restaurant Menu's Photo</h3>
+
+      <div class="preview" id="menuPreview"></div>
+
+      <div class="upload-box">
+        <p>📷 Drop your restaurant menu's photo</p>
+        <button type="button" id="menuPick">+ Add photo</button>
+        <div class="temp-preview" id="menuTemp"></div>
+        <input type="file" id="menuInput" accept="image/*" multiple hidden>
+      </div>
+
+      <button class="submit-btn" id="menuSubmit">Upload</button>
+    </section>
+
+    <section class="section">
+      <h3>Restaurant Photo</h3>
+
+      <div class="preview" id="restoPreview"></div>
+
+      <div class="upload-box">
+        <p>📷 Drop your restaurant's photo</p>
+        <button type="button" id="restoPick">+ Add photo</button>
+        <div class="temp-preview" id="restoTemp"></div>
+        <input type="file" id="restoInput" accept="image/*" multiple hidden>
+      </div>
+
+      <button class="submit-btn" id="restoSubmit">Upload</button>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="uploadowner.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login | Nom-Nom Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="loginowner.css">
+</head>
+
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <h1 class="brand-title">Nom-Nom Map</h1>
+      <p class="subtitle">Owner Login 🔐</p>
+
+      <form id="adminLoginForm">
+
+        <!-- EMAIL -->
+        <div class="input-group">
+          <input 
+            type="email" 
+            id="email"
+            placeholder="Email address" 
+            required
+          >
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+          <input 
+            type="password" 
+            id="password"
+            placeholder="Password" 
+            required
+          >
+        </div>
+
+        <!-- ID ADMIN (TAMBAHAN SATU-SATUNYA) -->
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="restoId"
+            placeholder="Resto ID"
+            required
+          >
+        </div>
+
+        <!-- tombol login -->
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JS DIPISAH -->
+  <script src="loginowner.js"></script>
+</body>
+</html>

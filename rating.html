@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom-Nom Map</title>
+    <link rel="stylesheet" href="rating.css"> 
+</head>
+<body>
+   <div class="map-container">
+  <header class="super"></header>
+  <div class="map-overlay"></div>
+  <section class="mie">
+
+    <h1 class="title-web">Nom-Nom Map</h1>
+  </section>
+</div>
+
+     <nav class="navbar">
+  <a href="index.html" class="nav-link"> 
+    <span class="text">Dashboard</span>
+  </a> 
+
+  <a href="kategori.html"class="nav-link">
+    <span class="text">Category</span>
+  </a>
+
+  <a href="rating.html" class="nav-link active">
+  <span class="text rating-active">Rating</span>
+</a>
+
+  <a href="about.html"class="nav-link">
+    <span class="text">About Us</span>
+  </a>
+
+  <a href="account.html"class="nav-link">
+    <span class="text">Account</span>
+  </a>
+</nav>
+
+<!-- CONTENT -->
+<section class="rating-section">
+
+  <!-- TOP RATING -->
+ <div class="category-block top-rating">
+
+  <div class="section-title trophy">
+    🏆 Top Rating <span>> 4.7</span>
+  </div>
+
+  <div class="card-container">
+
+    <!-- CARD 1 -->
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="bakso-samrat"
+      data-name="Bakso Solo Samrat"
+      data-location="Jl. Burangrang No. 24"
+      data-rating="⭐ 4.9 (9,3K reviews)"
+      data-image="Bakso Samrat.jpeg"
+    >
+      <img src="Bakso Samrat.jpeg" class="card-img">
+      <h3>Bakso Solo Samrat</h3>
+      <p class="location">📍 Jl. Burangrang No. 24</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.9</p>
+      <p class="reviews">9,3K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="Momoyo"
+      data-name="Momoyo"
+      data-location="Jl. Terusan Buah Batu"
+      data-rating="⭐ 4.8 (2,1K reviews)"
+      data-image="Momoyo.jpeg"
+    >
+      <img src="Momoyo.jpeg" class="card-img">
+      <h3>Momoyo</h3>
+      <p class="location">📍 Jl. Terusan Buah Batu </p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 2,1K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="taichan-bengawan"
+      data-name="Taichan Bengawan"
+      data-location="Jl. Taman Cibeunying"
+      data-rating="⭐ 4.8 (7,2K reviews)"
+      data-image="Sate Taichan.jpeg"
+    >
+      <img src="Sate Taichan.jpeg" class="card-img">
+      <h3> Taichan Bengawan</h3>
+      <p class="location">📍 Jl. Taman Cibeunying</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 7,2K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="baskin-robbins"
+      data-name="Baskin Robbins"
+      data-location="Transmart Buah Batu"
+      data-rating="⭐ 4.9 (2,5K reviews)"
+      data-image="ES KRIM BR.jpeg"
+    >
+      <img src="ES KRIM RB.jpeg" class="card-img">
+      <h3>Baskin Robbins</h3>
+      <p class="location">📍 Transmart Buah Batu</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.9</p>
+      <p class="reviews"> 2,5K reviews </p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="sadrasa-kitchen"
+      data-name="Sadrasa Kitchen"
+      data-location="Jl. Diponegoro No. 27"
+      data-rating="⭐ 5.0 (6,1K reviews)"
+      data-image="sadrasa.jpg"
+    >
+      <img src="sadrasa.jpg" class="card-img">
+      <h3>Sadrasa Kitchen </h3>
+      <p class="location">📍 Jl. Diponegoro No. 27</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 5.0</p>
+      <p class="reviews"> 6,1K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="feel-matcha"
+      data-name="Feel Matcha"
+      data-location="Jl. Braga No. 64"
+      data-rating="⭐ 4.8 (6,8K reviews)"
+      data-image="FEEL MATCHA.png"
+    >
+      <img src="FEEL MATCHA.png" class="card-img">
+      <h3>Feel Matcha</h3>
+      <p class="location">📍 Jl. Braga No. 64</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 6,8K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="warung-nasi"
+      data-name="Warung Nasi Bu Imas"
+      data-location="Jl. Balong Gede N0. 38"
+      data-rating="⭐ 4.9 (11,5K reviews)"
+      data-image="Nasi Bu Imas.jpg"
+    >
+      <img src="Nasi Bu Imas.jpg" class="card-img">
+      <h3>Warung Nasi Bu Imas</h3>
+      <p class="location">📍 Jl. Balong Gede No. 38</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.9</p>
+      <p class="reviews"> 11,5K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="bubur-dpr"
+      data-name="Toko Bubur DPR"
+      data-location="Cibeunying Kidul"
+      data-rating="⭐ 4.8 (12,4K reviews)"
+      data-image="bubur dpr.png"
+    >
+      <img src="bubur dpr.png" class="card-img">
+      <h3>Toko Bubur DPR</h3>
+      <p class="location">📍 Cibeunying Kidul</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 12,4K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="sincere-cafe"
+      data-name="Sincere Cafe"
+      data-location="Kliningan 7A"
+      data-rating="⭐ 4.8 (6,7K reviews)"
+      data-image="sincere.jpg"
+    >
+      <img src="sincere.jpg" class="card-img">
+      <h3>Sincere Cafe</h3>
+      <p class="location">📍 Kliningan 7A</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 6,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="richeese-factory"
+      data-name="Richeese Factory"
+      data-location="Jl. Buah Batu No. 251"
+      data-rating="⭐ 4.8 (8,8K reviews)"
+      data-image="richeese factory.jpg"
+    >
+      <img src="richeese factory.jpg" class="card-img">
+      <h3>Richeese Factory</h3>
+      <p class="location">📍Jl. Buah Batu No. 251</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.8</p>
+      <p class="reviews"> 8,8K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+</div> <!-- ✅ card-container DITUTUP DI SINI -->
+
+</div>
+
+  <!-- HIGHLY RATED -->
+  <div class="category-block highly-rated">
+
+  <div class="section-title star">
+    🌟 Highly Rated <span>> 4.5</span>
+  </div>
+
+  <div class="card-container">
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="nara-park"
+      data-name="Nara Park Bandung"
+      data-location="Jl. Gn. Agung No. 28"
+      data-rating="⭐ 4.6 (7,5K reviews)"
+      data-image="Nara Park.jpeg"
+    >
+      <img src="Nara Park.jpeg" class="card-img">
+      <h3>Nara Park Bandung</h3>
+      <p class="location">📍 Jl. Gn. Agung No. 28</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews">7,5K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="ayam-sari"
+      data-name="Ayam Sari Rasa"
+      data-location="Jl. Aceh No. 63"
+      data-rating="⭐ 4.6 (4,7K reviews)"
+      data-image="ayam sari.png"
+    >
+      <img src="ayam sari.png" class="card-img">
+      <h3>Ayam Sari Rasa</h3>
+      <p class="location">📍 Jl. Aceh No. 63</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews">4,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="batagor-kahuripan"
+      data-name="Batagor Kahuripan"
+      data-location="Pasar Cihapit KB No. 6"
+      data-rating="⭐ 4.6 (5,4K reviews)"
+      data-image="batagor kahuripan.jpg"
+    >
+      <img src="batagor kahuripan.jpg" class="card-img">
+      <h3>Batagor Kahuripan</h3>
+      <p class="location">📍 Pasar Cihapit KB No. 6</p>
+      <p class="rating">⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews">5,4K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="cerita-manis"
+      data-name="Cerita Manis"
+      data-location="Pasar Cihapit"
+      data-rating="⭐ 4.6 (4,7K reviews)"
+      data-image="cerita manis.jpeg"
+    >
+      <img src="cerita manis.jpeg" class="card-img">
+      <h3>Cerita Manis</h3>
+      <p class="location">📍 Pasar Cihapit</p>
+      <p class="rating">⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews">4,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="bien-patisserie"
+      data-name="Bien Patisserie"
+      data-location="Pasar Cihapit KB 14/15"
+      data-rating="⭐ 4.7 (5K reviews)"
+      data-image="bien patisserie.png"
+    >
+      <img src="bien patisserie.png" class="card-img">
+      <h3>Bien Patisserie</h3>
+      <p class="location">📍 Pasar Cihapit KB 14/15</p>
+      <p class="rating">⭐⭐⭐⭐ 4.7</p>
+      <p class="reviews">5K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="dimsum-ayam"
+      data-name="Dimsum 9 Ayam"
+      data-location="Jl. Pasir Kaliki No. 170"
+      data-rating="⭐ 4.7 (6,5K reviews)"
+      data-image="sembilan ayam.png"
+    >
+      <img src="sembilan ayam.png" class="card-img">
+      <h3>Dimsum 9 Ayam</h3>
+      <p class="location">📍 Jl. Pasir Kaliki No. 170</p>
+      <p class="rating">⭐⭐⭐⭐ 4.7</p>
+      <p class="reviews">6,5K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="sate-bu-ngantuk"
+      data-name="Sate Bu Ngantuk"
+      data-location="Jl. Rancabentang III"
+      data-rating="⭐ 4.6 (4,7K reviews)"
+      data-image="sate bu ngantuk.jpg"
+    >
+      <img src="sate bu ngantuk.jpg" class="card-img">
+      <h3>Sate Bu Ngantuk</h3>
+      <p class="location">📍 Jl. Rancabentang III</p>
+      <p class="rating">⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews">4,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="sedjuk-kopi"
+      data-name="Sedjuk Bakmi & Kopi"
+      data-location="Jl. Konstitusi I No. 16"
+      data-rating="⭐ 4.6 (5,5K reviews)"
+      data-image="sedjuk.jpeg"
+    >
+      <img src="sedjuk.jpeg" class="card-img">
+      <h3>Sedjuk Bakmi & Kopi</h3>
+      <p class="location">📍 Jl. Konstitusi I No. 16</p>
+      <p class="rating">⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews"> 5,5K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="sultan-agung"
+      data-name="Sultan Agung Resto"
+      data-location="Jl. Sultan Agung No. 23"
+      data-rating="⭐ 4.7 (5,2K reviews)"
+      data-image="sultan agung.jpg"
+    >
+      <img src="sultan agung.jpg" class="card-img">
+      <h3>Sultan Agung Resto</h3>
+      <p class="location">📍 Jl. Sultan Agung No. 23</p>
+      <p class="rating">⭐⭐⭐⭐⭐ 4.7</p>
+      <p class="reviews"> 5,2K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+    <div class="card"
+      onclick="openDetail(this)"
+      data-id="woi-supertiam"
+      data-name="Woi Supertiam"
+      data-location="Jl. Sumbawa No. 24"
+      data-rating="⭐ 4.6 (5,8K reviews)"
+      data-image="supertiam.jpg"
+    >
+      <img src="supertiam.jpg" class="card-img">
+      <h3>Woi Supertiam</h3>
+      <p class="location">📍 Jl. Sumbawa No. 24</p>
+      <p class="rating">⭐⭐⭐⭐ 4.6</p>
+      <p class="reviews"> 5,8K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+</div>
+
+  <!-- SOLID CHOICE -->
+ <div class="category-block solid-choice">
+
+    <div class="section-title sparkle">
+    ⭐ Solid Choice <span>> 4.0</span>
+  </div>
+
+  <div class="card-container">
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="boemi-mitoha"
+      data-name="RM Boemi Mitoha"
+      data-location="Jl. Ciliwung No. 15"
+      data-rating="⭐ 4.4 (6,7K reviews)"
+      data-image="Boemi Mitoha.jpg"
+    >
+      <img src="Boemi Mitoha.jpg" class="card-img">
+      <h3>RM Boemi Mitoha</h3>
+      <p class="location">📍 Jl. Ciliwung No. 15</p>
+      <p class="rating">⭐⭐⭐⭐ 4.4</p>
+      <p class="reviews"> 6,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="tji-laki"
+      data-name="Tji Laki 9"
+      data-location="Jl. Cilaki No. 9"
+      data-rating="⭐ 4.4 (1,3K reviews)"
+      data-image="tjilaki.png"
+    >
+      <img src="tjilaki.png" class="card-img">
+      <h3>Tji Laki 9</h3>
+      <p class="location">📍 Jl. Cilaki No. 9</p>
+      <p class="rating">⭐⭐⭐⭐ 4.4</p>
+      <p class="reviews">1,3K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="sate-mas-pendi"
+      data-name="Sate Mas Pendi"
+      data-location="Jl. Van Deventer No. 1"
+      data-rating="⭐ 4.5 (4,9K reviews)"
+      data-image="sate asin.jpg"
+    >
+      <img src="sate asin.jpg" class="card-img">
+      <h3>Sate Mas Pendi</h3>
+      <p class="location">📍 Jl. Van Deventer No. 1</p>
+      <p class="rating">⭐⭐⭐⭐ 4.5</p>
+      <p class="reviews"> 4,9K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="kupat-tahu"
+      data-name="Kupat Tahu Gempol"
+      data-location="Jl. Gempol Kulon"
+      data-rating="⭐ 4.5 (3,4K reviews)"
+      data-image="Kupat Tahu.jpg"
+    >
+      <img src="Kupat Tahu.jpg" class="card-img">
+      <h3>Kupat Tahu Gempol</h3>
+      <p class="location">📍 Jl. Gempol Kulon </p>
+      <p class="rating">⭐⭐⭐⭐ 4.5</p>
+      <p class="reviews"> 3,4K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="nolda-pocha"
+      data-name="Nolda Pocha"
+      data-location="Jl. Burangrang No. 34"
+      data-rating="⭐ 4.3 (3,7K reviews)"
+      data-image="nolda pocha.png"
+    >
+      <img src="nolda pocha.png" class="card-img">
+      <h3>Nolda Pocha</h3>
+      <p class="location">📍 Jl. Burangrang No. 34</p>
+      <p class="rating">⭐⭐⭐⭐ 4.3</p>
+      <p class="reviews"> 3,7K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="batagor-kingsley"
+      data-name="Batagor Kingsley"
+      data-location="Jl. Veteran No. 25"
+      data-rating="⭐ 4.4 (2,1K reviews)"
+      data-image="Batagor Kingsley.jpg"
+    >
+      <img src="Batagor Kingsley.jpg" class="card-img">
+      <h3>Batagor Kingsley</h3>
+      <p class="location">📍 Jl. Veteran No. 25</p>
+      <p class="rating">⭐⭐⭐⭐ 4.4</p>
+      <p class="reviews"> 2,1K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="kedai-oifyoo"
+      data-name="Kedai Oifyoo"
+      data-location="Jl. Tubagus Ismail"
+      data-rating="⭐ 4.2 (2K reviews)"
+      data-image="oifyoo.png"
+    >
+      <img src="oifyoo.png" class="card-img">
+      <h3>Kedai Oifyoo</h3>
+      <p class="location">📍 Jl. Tubagus Ismail</p>
+      <p class="rating">⭐⭐⭐⭐ 4.2</p>
+      <p class="reviews"> 2K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="tsukamie-noodle"
+      data-name="Tsukamie Noodle"
+      data-location="Jl. Haji Wasid No. 23"
+      data-rating="⭐ 4.5 (4,8K reviews)"
+      data-image="Tsukamie.jpg"
+    >
+      <img src="Tsukamie.jpg" class="card-img">
+      <h3>Tsukamie Noodle</h3>
+      <p class="location">📍 Jl. Haji Wasid No. 23</p>
+      <p class="rating">⭐⭐⭐⭐ 4.5</p>
+      <p class="reviews"> 4,8K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="yabe-izakaya"
+      data-name="Yabe Izakaya"
+      data-location="Paskal Hyper Square"
+      data-rating="⭐ 4.5 (3,2K reviews)"
+      data-image="yabe izakaya.jpg"
+    >
+      <img src="yabe izakaya.jpg" class="card-img">
+      <h3>Yabe Izakaya</h3>
+      <p class="location">📍 Paskal Hyper Square</p>
+      <p class="rating">⭐⭐⭐⭐ 4.5</p>
+      <p class="reviews"> 3,2K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+
+     <div class="card"
+      onclick="openDetail(this)"
+      data-id="blue-turtle"
+      data-name="Blue Turtle Chicken"
+      data-location="Jl. Palasari No. 45"
+      data-rating="⭐ 4.3 (2,8K reviews)"
+      data-image="blue turtle.jpeg"
+    >
+      <img src="blue turtle.jpeg" class="card-img">
+      <h3>Blue Turtle Chicken</h3>
+      <p class="location">📍 Jl. Palasari No. 45</p>
+      <p class="rating">⭐⭐⭐⭐ 4.3</p>
+      <p class="reviews"> 2,8K reviews</p>
+      <button class="add-review-btn" onclick="goToAddReview()">Add Review</button>
+    </div>
+</div>
+</section>
+
+<!-- DETAIL MODAL -->
+<div id="detailModal" class="detail-modal hidden">
+  <div class="detail-content">
+    <button class="close-btn" onclick="closeDetail()">×</button>
+
+    <div class="detail-images">
+      <img id="detailImage" src="" alt="Resto">
+    </div>
+
+    <h2 id="detailName"></h2>
+    <p id="detailLocation"></p>
+    <p id="detailRating"></p>
+
+    <hr>
+
+    <h3>⭐Reviews</h3>
+<div class="review-list">
+    <div class="review-item">
+      <strong>Agus Wibowo</strong> ⭐⭐⭐⭐⭐
+      <p>Baksonya enak banget, kuahnya gurih!</p>
+    </div>
+
+    <div class="review-item">
+      <strong>Dina Anjani</strong> ⭐⭐⭐⭐
+      <p>Tempatnya nyaman, pelayanan cepat.</p>
+    </div>
+</div>
+
+    <button class="add-review-modal" onclick="goToAddReview()">Add Review</button>
+  </div>
+</div>
+
+<footer class="footer">
+
+  <div class="footer-item">
+    
+    <img src="INSTA.png" alt="Instagram" class="footer-icon">
+    <a href="https://instagram.com/nomnommap" target="_blank" class="footer-link">
+    <span class="footer-text">@nomnommap</span> 
+    </a>
+  </div>
+
+  <div class="footer-item">
+   <a href="mailto:nomnommap@gmail.com" class="footer-link">
+      <img src="EMAIL.png" alt="Email" class="footer-icon">
+      <span class="footer-text">nomnommap@gmail.com</span>
+    </a>
+  </div>
+
+  <div class="footer-item"class="footer-icon">
+    <a href="tel:+628123456789" class="footer-link">
+      <img src="TELEPON.png" alt="Phone" class="footer-icon">
+      <span class="footer-text">+62 812-3456-789</span>
+    </a>
+  </div>
+
+</footer>
+
+<script src="rating.js"></script>
+
+</body>
+</html>
